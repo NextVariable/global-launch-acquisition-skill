@@ -1,53 +1,97 @@
-# 产品发布与渠道获客 · Global Launch & Acquisition
+![Launch & Acquisition — five independent growth skills](docs/assets/cover.svg)
 
-把产品送到合适的海外用户面前：选首批渠道、安排发布、组织社媒与社区运营、推进创作者合作，并确认每次动作是否真正完成。
+# Launch & Acquisition
 
-这个 Skill 适合已经知道产品做什么、需要启动或改进获客的人。可以只做一次产品上线，也可以运营一个账号、组织一批 KOL 合作，或打通搜索、应用商店和开源生态入口。提供普通产品资料即可独立使用，不要求先安装其他 Skill。
+**产品发布与渠道获客 · 选择值得先试的海外渠道，准备发布与合作，接住用户，并核实动作是否真的完成。**
 
-## 安装与第一次使用
+[![Validate](https://github.com/NextVariable/global-launch-acquisition-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/NextVariable/global-launch-acquisition-skill/actions/workflows/validate.yml) [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Agent Skills](https://img.shields.io/badge/Agent_Skills-compatible-6e56cf.svg)](https://agentskills.io/specification)
 
-将 `skills/global-launch-acquisition` 整个目录复制到支持 Agent Skills 的客户端。例如：
+[快速开始](#quick-start) · [任务示例](examples/first-task.md) · [方法](#method) · [验证](#validation) · [五个 Skill 合集](https://github.com/NextVariable/global-growth-skills)
 
-```bash
-git clone https://github.com/NextVariable/global-launch-acquisition-skill.git
-mkdir -p ~/.agents/skills
-cp -R global-launch-acquisition-skill/skills/global-launch-acquisition ~/.agents/skills/
+输入 **目标用户、现有页面和素材、渠道条件、预算、时间与支持产能**，得到 **渠道选择、发布包、合作提案、排期、承接及核验结果**。可以独立使用；已有项目资料或其他 Skill 的交接都能直接接入。指令以中文编写，对客产物按目标受众选择语言。
+
+## In practice
+
+> 先选一个已有账号的相关社区；创作者邮件作为备用材料，不把未确认的合作当成已锁定流量。
+>
+> 两周 12 小时闭合：准备 2、参与 1.5、筛选 0.5、支持 6、跟进 1、复盘 1；最多接 4 个新团队。
+
+以上是合成任务的结果节选。[查看输入和完整任务说明 →](examples/first-task.md)
+
+## Quick start
+
+在你的项目目录运行，选择要安装到的客户端：
+
+```sh
+npx skills add NextVariable/global-launch-acquisition-skill --skill global-launch-acquisition
 ```
 
-已有同名目录时先检查版本，避免覆盖自己的修改。重新加载客户端后调用 `$global-launch-acquisition`。
+需要跨项目使用时加 `-g`。此安装方式需要 Node.js 22.20+；也可以直接复制技能目录。
+
+<details>
+<summary>手动安装到 Codex（Git；已有目录时停止）</summary>
+
+```sh
+git clone https://github.com/NextVariable/global-launch-acquisition-skill.git
+cd global-launch-acquisition-skill
+mkdir -p "$HOME/.agents/skills"
+target="$HOME/.agents/skills/global-launch-acquisition"
+if [ -e "$target" ] || [ -L "$target" ]; then
+  echo "Already exists: $target"
+else
+  cp -R skills/global-launch-acquisition "$target"
+fi
+```
+
+完整保留 `skills/global-launch-acquisition/` 内的方法、模板和许可。已有同名目录时先保存旧版及个人修改，再比较版本；不要把两份目录直接合并。其他客户端使用其配置的 Skill 目录。
+
+</details>
+
+重新加载客户端后调用 `$global-launch-acquisition`。纯 Markdown 方法，无需 Python、服务或专用密钥。
 
 ```text
-使用 $global-launch-acquisition。我们做面向英语独立开发者的日志排查工具，
-已有可运行示例、英文 README 和一段演示，官网能免费试用。
-下周上线，一人每天能投入 2 小时，现金预算 300 美元。
-请选最值得先试的渠道，给出具体发布包、安排和停止条件。
-目前只准备，不发布、不联系他人。
+使用 $global-launch-acquisition。
+产品与当前阶段：……
+这次要解决：……
+已确认的能力、材料和限制：……
+可投入的时间、预算与人员：……
+请完成我需要的产物；未知的关键条件明确说明。
 ```
 
-如果要执行，在后续说明具体账号、目标、可用素材和动作范围；已经给过的授权会延续。Skill 使用客户端现有搜索、文件与发布工具，本身不附带账号或凭证。工具不支持某项动作时，会交付待执行包并明确阻塞。
+项目资料保存在你自己的工作目录，安装包只放通用方法。实际外发、发布、支出或客户系统操作依赖相应工具和授权。
 
-## 它会帮你完成什么
+## Method
 
-先看目标用户在哪里、产品能否接住他们，再决定渠道和投入。发布前检查实际路径，发布中组织素材、合作与答疑，发布后记录真实状态，把主动需求交给销售、把可比较的数据交给实验复盘。
+入口只保留任务判断和必要边界，按需加载相关方法，不要求每次读完或跑完整个流程。
 
-按任务加载五份方法： [发布与渠道选择](skills/global-launch-acquisition/references/launch-and-channels.md)、[社媒与社区](skills/global-launch-acquisition/references/social-and-community.md)、[合作与创作者](skills/global-launch-acquisition/references/partners-and-creators.md)、[持续发现与生态分发](skills/global-launch-acquisition/references/discovery-and-ecosystems.md)、[执行与恢复](skills/global-launch-acquisition/references/execution-and-recovery.md)。
+| 方法 | 解决什么 |
+|---|---|
+| [发布与渠道](skills/global-launch-acquisition/references/launch-and-channels.md) | 从受众倒推渠道，检查承接，安排依赖与预算 |
+| [社媒与社区](skills/global-launch-acquisition/references/social-and-community.md) | 具体参与、自有账号、活动和贡献者运营 |
+| [合作与创作者](skills/global-launch-acquisition/references/partners-and-creators.md) | 候选、提案、内容包、权利、费用和履约 |
+| [发现与生态](skills/global-launch-acquisition/references/discovery-and-ecosystems.md) | 搜索、商店、开源集成、媒体和目录 |
+| [执行与恢复](skills/global-launch-acquisition/references/execution-and-recovery.md) | 授权动作、状态回读、去重与故障恢复 |
 
-交付可以是一条具体渠道方案、一份可执行发布包，或经授权完成的操作与核验结果。已排期、已提交、实际发布和收到回复会分开报告；不会把热度、排名、Star 或下载量直接写成业务增长。
+## Validation
 
-本 Skill 聚焦渠道与发布。市场选择和 GTM 战略、完整内容制作、销售与客户留存、实验统计分别由其他任务负责；无需安装它们才能完成本 Skill 的职责。
-
-## 开发与验证
-
-```bash
-python3 scripts/validate.py
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate.py
 ```
 
-结构检查与业务任务的验证范围分别见 [验证记录](validation/README.md)；测试情景见 [scenarios.md](validation/scenarios.md)。目录与边界见 [设计说明](docs/design.md)。客户资料、联系方式和执行回执应保存在私有工作目录，不提交到公共仓库。
+[验证说明](validation/README.md)区分结构与记录检查、计算测试、模型任务和真实业务结果。自动检查不替代语义审阅；合成试用不能证明获客、收入或留存提升。客户端实际加载、目标用户理解和业务效果应在自己的环境验证。
+
+## Ecosystem
+
+[01 市场战略](https://github.com/NextVariable/global-gtm-strategy-skill) → [02 定位内容](https://github.com/NextVariable/global-growth-content-skill) → [03 发布获客](https://github.com/NextVariable/global-launch-acquisition-skill) → [04 客户增长](https://github.com/NextVariable/global-sales-retention-skill) → [05 实验复盘](https://github.com/NextVariable/global-growth-experiments-skill)
+
+五个独立仓库，按当前问题选用。共享产品背景、证据与版本，结果可以回到前面的决策；其他四个不是安装依赖。
+
+## Contributing
+
+改进建议请带一个具体任务、期望结果和实际问题。开发、检查与提交方式见 [CONTRIBUTING.md](CONTRIBUTING.md)；功能问题可提交 [Issue](https://github.com/NextVariable/global-launch-acquisition-skill/issues/new/choose)。
 
 ## English
 
-An Agent Skill for overseas product launches and channel acquisition: select relevant channels, coordinate social and community operations, manage creator partnerships, and verify publishing or submission outcomes. It works independently from ordinary product inputs and uses tools already available in the client. Public actions and spending stay within the user's authorization. Instructions are primarily in Chinese; deliverables can match the target audience's language.
+Plan and execute international launches, channel distribution, community participation and creator partnerships. Deliver a concrete path from relevant attention to a supported next action, with verifiable execution status. Install the complete skill directory and invoke `$global-launch-acquisition`. Instructions are Chinese-first; deliverables follow the target audience. Model and external tools are supplied by your client.
 
-## License
-
-[MIT](LICENSE).
+[MIT](LICENSE). 安装和再分发时保留随包许可文件。
