@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品发布与渠道获客"
+  short_description: "选择适合产品的海外渠道，组织发布与合作，并核验实际执行结果"
+  default_prompt: "使用 $global-launch-acquisition，根据我的产品、已有内容和资源，完成一条可验证的海外发布或渠道获客路径。"

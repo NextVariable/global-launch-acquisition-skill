@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "execution": "actual model sub-agent runs",
+  "isolation": "One fresh context per run, three tasks sequentially within each. No development history, prior outputs or grading notes supplied.",
+  "model": "Inherited host model; exact build, sampling configuration, tokens and cost unavailable.",
+  "limitations": "Synthetic tasks; public web research where needed, no real customer or platform mutations. No causal comparison or automatic-trigger measurement.",
+  "runs": {
+    "initial": {
+      "fork_turns": "none",
+      "runtime_sha256": {
+        "skills/global-launch-acquisition/LICENSE": "4f18feab6cac96e3e33da744be4cd74db6b779326008bfaf2b3243ecf16811ca",
+        "skills/global-launch-acquisition/SKILL.md": "0ab29134b70ae81d20f662555b7498daf45de81e3671ffde7dda13c19de8516f",
+        "skills/global-launch-acquisition/agents/openai.yaml": "ad4bec7184357c15dd1cc744da65d906d52b4a04ec4141521d400673ecaa5ea9",
+        "skills/global-launch-acquisition/references/discovery-and-ecosystems.md": "b90daf9983408a7ab823ca7c5a3bdfc1c674c0c40c39d7a38c20a936bf018930",
+        "skills/global-launch-acquisition/references/execution-and-recovery.md": "c37629f4afb7f4487384fbea0aa92e9b121ee5bb6b42656e5a97372f96ea080c",
+        "skills/global-launch-acquisition/references/launch-and-channels.md": "ce4854e1ba3974b28359c4c5b00c4326a03012761e0cf841530982e6b5cc3702",
+        "skills/global-launch-acquisition/references/partners-and-creators.md": "8d2f78084c0fc43c3873c6c80ede089282688f32db57f89fa92350286a9d7bbc",
+        "skills/global-launch-acquisition/references/social-and-community.md": "ecd7f268d0385a022976a345b623987cdf08aa76f79c9c4c1cb12b07a367eef4",
+        "skills/global-launch-acquisition/templates/channel-handoff.md": "1b719a2cb7da565b7a144ae3d59010545f8a483f4ab486638cb56fb26c12725a"
+      }
+    },
+    "revised": {
+      "fork_turns": "none",
+      "runtime_sha256": {
+        "skills/global-launch-acquisition/LICENSE": "4f18feab6cac96e3e33da744be4cd74db6b779326008bfaf2b3243ecf16811ca",
+        "skills/global-launch-acquisition/SKILL.md": "e96070f98863412d4c99d5b2f36324bf33da64e63fb0f7fdf51f208c5abe03e7",
+        "skills/global-launch-acquisition/agents/openai.yaml": "ad4bec7184357c15dd1cc744da65d906d52b4a04ec4141521d400673ecaa5ea9",
+        "skills/global-launch-acquisition/references/discovery-and-ecosystems.md": "b90daf9983408a7ab823ca7c5a3bdfc1c674c0c40c39d7a38c20a936bf018930",
+        "skills/global-launch-acquisition/references/execution-and-recovery.md": "c37629f4afb7f4487384fbea0aa92e9b121ee5bb6b42656e5a97372f96ea080c",
+        "skills/global-launch-acquisition/references/launch-and-channels.md": "ce4854e1ba3974b28359c4c5b00c4326a03012761e0cf841530982e6b5cc3702",
+        "skills/global-launch-acquisition/references/partners-and-creators.md": "8d2f78084c0fc43c3873c6c80ede089282688f32db57f89fa92350286a9d7bbc",
+        "skills/global-launch-acquisition/references/social-and-community.md": "ecd7f268d0385a022976a345b623987cdf08aa76f79c9c4c1cb12b07a367eef4",
+        "skills/global-launch-acquisition/templates/channel-handoff.md": "1b719a2cb7da565b7a144ae3d59010545f8a483f4ab486638cb56fb26c12725a"
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "initial-launch",
+      "run": "initial",
+      "input_file": "launch.input.md",
+      "input_sha256": "94002e563fc36227dabd2a190d6688474eed51201b34c4971efb8e4f45cf9d2f",
+      "output_file": "launch.output.md",
+      "output_sha256": "e9db8bae649f2b8a43624078cceb55023dc0897c5170c54724278989a88ccd0b"
+    },
+    {
+      "id": "initial-creator",
+      "run": "initial",
+      "input_file": "creator.input.md",
+      "input_sha256": "0b5bb038131380faa556c2e89c3b57e8e918f09a111c9066ddb3af494c56f25c",
+      "output_file": "creator.output.md",
+      "output_sha256": "0a343f773231336e908eee9a908c7533d0cd680551d547fbe6c84fe724bf8853"
+    },
+    {
+      "id": "initial-recovery",
+      "run": "initial",
+      "input_file": "recovery.input.md",
+      "input_sha256": "9785e17dff39d75ab05e6feb19adfa53483d007bcc1533f75713d860ca6d3573",
+      "output_file": "recovery.output.md",
+      "output_sha256": "d7deeb9d49413bc5223bb5a8fa75aba13961d873949bb518b79c7f8048ec513c"
+    },
+    {
+      "id": "revised-launch",
+      "run": "revised",
+      "input_file": "revised/launch.input.md",
+      "input_sha256": "94002e563fc36227dabd2a190d6688474eed51201b34c4971efb8e4f45cf9d2f",
+      "output_file": "revised/launch.output.md",
+      "output_sha256": "272d106ec50f6c960b587ca8bec5d46b8f774cd6cc760d5f11d93b02b3c0e2a5"
+    },
+    {
+      "id": "revised-creator",
+      "run": "revised",
+      "input_file": "revised/creator.input.md",
+      "input_sha256": "0b5bb038131380faa556c2e89c3b57e8e918f09a111c9066ddb3af494c56f25c",
+      "output_file": "revised/creator.output.md",
+      "output_sha256": "a523b7dc7ab4d366dd8ec045fda804ce04653b9ed10199a6a80b8284e4bf0a9e"
+    },
+    {
+      "id": "revised-recovery",
+      "run": "revised",
+      "input_file": "revised/recovery.input.md",
+      "input_sha256": "9785e17dff39d75ab05e6feb19adfa53483d007bcc1533f75713d860ca6d3573",
+      "output_file": "revised/recovery.output.md",
+      "output_sha256": "86c19260f6a426c7064b50d534a3a992eb31ec53def9764f1e023509c005a668"
+    }
+  ],
+  "accepted_runtime_sha256": {
+    "skills/global-launch-acquisition/LICENSE": "4f18feab6cac96e3e33da744be4cd74db6b779326008bfaf2b3243ecf16811ca",
+    "skills/global-launch-acquisition/SKILL.md": "e96070f98863412d4c99d5b2f36324bf33da64e63fb0f7fdf51f208c5abe03e7",
+    "skills/global-launch-acquisition/agents/openai.yaml": "ad4bec7184357c15dd1cc744da65d906d52b4a04ec4141521d400673ecaa5ea9",
+    "skills/global-launch-acquisition/references/discovery-and-ecosystems.md": "b90daf9983408a7ab823ca7c5a3bdfc1c674c0c40c39d7a38c20a936bf018930",
+    "skills/global-launch-acquisition/references/execution-and-recovery.md": "c37629f4afb7f4487384fbea0aa92e9b121ee5bb6b42656e5a97372f96ea080c",
+    "skills/global-launch-acquisition/references/launch-and-channels.md": "ce4854e1ba3974b28359c4c5b00c4326a03012761e0cf841530982e6b5cc3702",
+    "skills/global-launch-acquisition/references/partners-and-creators.md": "8d2f78084c0fc43c3873c6c80ede089282688f32db57f89fa92350286a9d7bbc",
+    "skills/global-launch-acquisition/references/social-and-community.md": "ecd7f268d0385a022976a345b623987cdf08aa76f79c9c4c1cb12b07a367eef4",
+    "skills/global-launch-acquisition/templates/channel-handoff.md": "1b719a2cb7da565b7a144ae3d59010545f8a483f4ab486638cb56fb26c12725a"
+  },
+  "recorded_at_utc": "2026-10-23T16:24:58.217238+00:00"
+}
