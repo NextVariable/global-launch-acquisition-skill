@@ -95,3 +95,5 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate.py
 Plan and execute international launches, channel distribution, community participation and creator partnerships. Deliver a concrete path from relevant attention to a supported next action, with verifiable execution status. Install the complete skill directory and invoke `$global-launch-acquisition`. Instructions are Chinese-first; deliverables follow the target audience. Model and external tools are supplied by your client.
 
 [MIT](LICENSE). 安装和再分发时保留随包许可文件。
+
+维护与更新：[变更记录](CHANGELOG.md) · [升级与回退](docs/upgrading.md) · [安全问题反馈](SECURITY.md)。
